@@ -948,7 +948,20 @@ form label {
 
 .simply-countdown {
   /* The countdown */
-  margin-bottom: 2em;
+  margin-bottom: 1em;
+  font-family: "Work Sans", Arial, serif;
+  font-size: 5vw;
+}
+@media screen and (min-width: 601px) {
+  .simply-countdown {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .simply-countdown {
+    font-size: 10px;
+  }
 }
 
 .simply-countdown > .simply-section {
@@ -961,8 +974,8 @@ form label {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
-  border-radius: 50%;
-  position: relative;
+  border-radius: 30%;
+  position: center;
   animation: pulse 1s ease infinite;
 }
 
