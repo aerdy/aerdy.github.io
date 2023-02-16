@@ -1007,7 +1007,6 @@ form label {
 #fh5co-testimonial,
 #fh5co-services,
 #fh5co-started,
-#fh5co-footer,
 #fh5co-event,
 #fh5co-couple-story,
 #fh5co-couple,
@@ -1016,6 +1015,11 @@ form label {
   padding: 7em 0;
   clear: both;
 }
+
+#fh5co-footer{
+  padding: 1em 0;
+}
+
 @media screen and (max-width: 768px) {
   #fh5co-testimonial,
   #fh5co-services,
