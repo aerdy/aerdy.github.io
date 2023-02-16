@@ -304,12 +304,11 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 .fh5co-cover {
-  height: 900px;
+  height: 100%;
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
   width: 100%;
-  background-size:  cover;
   scroll-snap-align: start;
 }
 .fh5co-cover .overlay {
@@ -974,29 +973,41 @@ form label {
   /* countdown block inner div */
   display: table-cell;
   vertical-align: middle;
+  height: 80px;
+  width: 80px;
+}
+
+
+
+/*@media screen and (min-width: 601px) {
+  .simply-amount{
+  font-size: 5px;
+  height: 80px;
+  width: 80px;
+  }
+}
+@media screen and (min-width: 601px) {
+  .simply-word{
+  font-size: 5px;
+  height: 80px;
+  width: 80px;
+  }
+}*/
+
+/*@media screen and (max-width: 601px) {
+  .simply-word{
+  font-size: 5px;
   height: 100px;
   width: 100px;
-}
-
-
-
-@media screen and (min-width: 601px) {
-  .simply-countdown .simply-section .simply-amount{
-    font-size: 10px;
   }
-}
+}*/
 
-@media screen and (max-width: 600px) {
-  .simply-countdown .simply-section .simply-word  {
-    font-size: 5px;
-  }
-}
 
 .simply-countdown > .simply-section {
   /* coutndown blocks */
   display: inline-block;
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   background: rgba(170, 203, 115, 0.8);
   margin: 0 4px;
   -webkit-border-radius: 50%;
