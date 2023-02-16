@@ -377,22 +377,22 @@
 	<script src="js/main.js"></script>
 
 	<script>
-    var d = new Date(new Date().getTime() + 200 * 120 * 120 * 2000);
+	    var d = new Date(new Date().getTime() + 200 * 120 * 120 * 2000);
 
-    // default example
-    simplyCountdown('.simply-countdown-one', {
-        year: 2023, 
-  		month: 6, 
-  		day: 4,
-    });
+	    // default example
+	    simplyCountdown('.simply-countdown-one', {
+	        year: 2023, 
+	  		month: 6, 
+	  		day: 4,
+	    });
 
-    //jQuery example
-    $('#simply-countdown-losange').simplyCountdown({
-        year: d.getFullYear(),
-        month: d.getMonth() + 1,
-        day: d.getDate(),
-        enableUtc: false
-    });
+	    //jQuery example
+	    $('#simply-countdown-losange').simplyCountdown({
+	        year: d.getFullYear(),
+	        month: d.getMonth() + 1,
+	        day: d.getDate(),
+	        enableUtc: false
+	    });
 	</script>
 
 	</body>
