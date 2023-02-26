@@ -25,10 +25,12 @@ function pushData(){
 
 
 database.ref('/nikahincom').once('value', function(snapshot){
-
   snapshot.forEach(function(data){
     document.getElementById('idnamewish').innerHTML = data.val().name
     document.getElementById('idmesswish').innerHTML = data.val().message
+
+   //document.getElementById('itemwish').innerHTML = '<div class="testimony-slide active text-center"><figure><img src="images/bride.jpg" alt="user"></figure><span id="idnamewish">John Doe, via <a href="#" class="twitter">Twitter</a></span><small id="idmesswish" class="block">"Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics"</small></blockquote></div>'
+
     console.log(data.val().name);
     console.log(data.val().message);
   });
