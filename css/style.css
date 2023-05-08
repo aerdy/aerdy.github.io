@@ -891,7 +891,6 @@ figure {
   left: 0;
   top: 0.05em;
   font-family: "icomoon";
-  speak: none;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -1200,7 +1199,7 @@ form label {
 }
 .couple-half h3 {
   font-family: "Sacramento", Arial, serif;
-  color: #aacb73;
+  color: #1e1e1e;
   font-size: 30px;
 }
 .couple-half .groom,
@@ -1637,7 +1636,6 @@ form label {
   position: absolute;
   right: 0px;
   font-family: "icomoon";
-  speak: none;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -1659,6 +1657,9 @@ form label {
   -ms-transform: rotate(-180deg);
   -o-transform: rotate(-180deg);
   transform: rotate(-180deg);
+}
+optgroup[label]{
+  color: gray;
 }
 
 .uppercase {
