@@ -451,12 +451,12 @@ figure {
 
 #fh5co-counter,
 #fh5co-event {
-  height: 850px;
   float: left;
   background-size: cover;
   scroll-behavior: smooth;
   scroll-snap-align: start;
   position: relative;
+  background-image:url("../images/img_bg_2_desktop.jpg");
 }
 #fh5co-counter .display-t,
 #fh5co-counter .display-tc,
@@ -492,6 +492,7 @@ figure {
   #fh5co-event {
     height: inherit;
     padding: 7em 0;
+    background-image:url("../images/img_bg_2.jpg");
   }
   #fh5co-counter .display-t,
   #fh5co-counter .display-tc,
