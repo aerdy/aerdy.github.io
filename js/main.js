@@ -1,7 +1,9 @@
 ;(function () {
 	
 	'use strict';
-
+	window.onload = function() {
+		var context = new AudioContext();
+	}
 	getMethod();
 	var mobileMenuOutsideClick = function() {
 
