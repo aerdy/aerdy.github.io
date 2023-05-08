@@ -387,15 +387,12 @@ figure {
   height: 100%;
   width: 100%;
   background-size: cover;
-  background-position: center center !important;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
+  scroll-behavior: smooth;
+  scroll-snap-align: start;
   position: relative;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-image: url("../images/img_bg_desktop.jpg");
+  background-image:url("../images/img_bg_desktop.jpg");
 }
+
 .fh5co-cover .overlay {
   z-index: 0;
   position: absolute;
@@ -411,8 +408,12 @@ figure {
 }
 @media screen and (max-width: 768px) {
   .fh5co-cover {
-    height: 750px;
-    background-size: relative;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    scroll-behavior: smooth;
+    scroll-snap-align: start;
+    position: relative;
     background-image: url("../images/img_bg.jpg");
   }
 }
@@ -1319,8 +1320,9 @@ form label {
 .fh5co-heading-top3 {
   margin-top: 3em;
 }
+
 .fh5co-heading-bottom {
-  margin-bottom: 2em;
+  margin-bottom: 5em;
 }
 
 .fh5co-heading {
