@@ -394,6 +394,7 @@ figure {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
+  background-image: url("../images/img_bg_desktop.jpg");
 }
 .fh5co-cover .overlay {
   z-index: 0;
@@ -412,6 +413,7 @@ figure {
   .fh5co-cover {
     height: 750px;
     background-size: cover;
+    background-image: url("../images/img_bg.jpg");
   }
 }
 .fh5co-cover .display-t,
