@@ -411,6 +411,7 @@ figure {
 @media screen and (max-width: 768px) {
   .fh5co-cover {
     height: 750px;
+    background-size: cover;
   }
 }
 .fh5co-cover .display-t,
