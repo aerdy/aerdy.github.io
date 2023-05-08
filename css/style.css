@@ -412,7 +412,7 @@ figure {
 @media screen and (max-width: 768px) {
   .fh5co-cover {
     height: 750px;
-    background-size: cover;
+    background-size: relative;
     background-image: url("../images/img_bg.jpg");
   }
 }
