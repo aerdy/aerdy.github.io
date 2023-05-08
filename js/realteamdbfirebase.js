@@ -17,9 +17,12 @@ function pushData(){
   var name = document.getElementById("fname").value;
   var message = document.getElementById("message").value;
   var dataRef = database.ref('/nikahincom').push();
+
+
   dataRef.set({
     name: name,
-    message: message
+    message: message,
+    profile: namefile
   });
   ClearFields();
   loaddata();
@@ -35,16 +38,31 @@ function loaddata(){
                         '<figure>'+
                           '<img src="images/bride.jpg" alt="user">'+
                         '</figure>'+
-                      `<span id="idnamewish">${data.val().name}, via <a href="#" class="twitter">Twitter</a></span>`+
+                      `<span id="idnamewish">${data.val().name}, via <a href="#" class="twitter">Invitation</a></span>`+
                       `<small id="idmesswish" class="block">"${data.val().message}"</small>`+
                     '</div>');
       
     });
     document.getElementById("itemwish").innerHTML = itemwish.reverse();
-    console.log(Object.keys(snapshot.val()));
   });
 }
 
+function uploadImage(namefile) {
+    const ref = firebase.storage().ref();
+    const file = document.querySelector("#photowisher").files[0];
+    const name = namefile+ "-" + file.name;
+    const metadata = {
+      contentType: file.type
+    };
+    const task = ref.child(name).put(file, metadata);task
+    .then(snapshot => snapshot.ref.getDownloadURL())
+    .then(url => {
+    console.log(url);
+    alert('image uploaded successfully');
+    document.querySelector("#image").src = url;
+    })
+    .catch(console.error);
+}
 
 function ClearFields() {
      document.getElementById("fname").value = "";
