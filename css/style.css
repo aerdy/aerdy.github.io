@@ -1310,6 +1310,16 @@ form label {
   color: #5d5d5d;
 }
 
+.fh5co-heading-top {
+  margin-top: 5em;
+}
+.fh5co-heading-top3 {
+  margin-top: 3em;
+}
+.fh5co-heading-bottom {
+  margin-bottom: 2em;
+}
+
 .fh5co-heading {
   margin-bottom: 5em;
 }
@@ -1876,6 +1886,7 @@ form label {
   background: #5cb85c;
   color: #fff;
 }
+
 
 .btn-info {
   background: #5bc0de;
