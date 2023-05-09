@@ -38,8 +38,8 @@ function loaddata(){
     snapshot.forEach(function(data){
       itemwish.push(
                       '<div class="testimony-slide active text-center">'+
-                      `<span id="idnamewish">${data.val().name}, <small><a href="#" class="twitter">${data.val().confirm}</a></small></span>`+
-                      `<small id="idmesswish" class="block">"${data.val().message}"</small>`+
+                      `<span id="idnamewish">${data.val().name}, <small><a class="twitter">${data.val().confirm}</a></small></span>`+
+                      `<small  class="block">"${data.val().message}"</small>`+
                     '</div>');
       
     });
