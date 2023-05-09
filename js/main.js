@@ -238,7 +238,9 @@
 function getMethod(){
 	const queryParams = new URLSearchParams(window.location.search);
 	let name = queryParams.get('name'); 
-	//document.getElementById("namewhiser").innerHTML = `<h2 id="namewhiser">We Are Getting Married <b>${name}</b></h2>`;
-
-	document.getElementById("namewhiser").innerHTML = `<h2><b>${name}</b></h2><h5>(Mohon maaf jika ada kesalahan penulisan nama & gelar)</h5>`;
+	if(name == null){
+		document.getElementById("namewhiser").innerHTML = `<h2><b>Nama Anda</b></h2><h5>(Mohon maaf jika ada kesalahan penulisan nama & gelar)</h5>`;
+	}else{
+		document.getElementById("namewhiser").innerHTML = `<h2><b>${name}</b></h2><h5>(Mohon maaf jika ada kesalahan penulisan nama & gelar)</h5>`;
+	}
 }
