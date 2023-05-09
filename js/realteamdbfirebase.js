@@ -38,11 +38,9 @@ function pushData(){
       document.getElementById("confirm").focus();
       }
     }else{
-      document.getElementById("message").placeholder = "Isi Pesan ...";
       document.getElementById("message").focus();
     }
   }else{
-    document.getElementById("fname").placeholder = "Isi Nama ...";
     document.getElementById("fname").focus();
   }
 }
@@ -54,20 +52,18 @@ function loaddata(){
     snapshot.forEach(function(data){
       if(data.val().confirm == 'Hadir'){
         itemwish.push(
-          `<div class="testimony-slide active text-center">`+
-          `<span id="idnamewish">${data.val().name}, <small><a class="hadir">${data.val().confirm}</a></small></span>`+
-          `<small>"${data.val().message}"</small>`+
-        `</div>`);
+          `<div class="testimony-slide fh5co-heading-top3 active text-center ">`+
+          `<span>${data.val().name}, <small><a class="hadir">${data.val().confirm}</a></small></span>`+
+          `<small>"${data.val().message}"</small></div>`);
       }else{
         itemwish.push(
-          `<div class="testimony-slide active text-center">`+
+          `<div class="testimony-slide fh5co-heading-top3 active text-center">`+
           `<span>${data.val().name}, <small><a class="tidakhadir">${data.val().confirm}</a></small></span>`+
-          `<small>"${data.val().message}"</small>`+
-        `</div>`);
+          `<small>"${data.val().message}"</small></div>`);
       }
     
     });
-    document.getElementById("itemwish").innerHTML = itemwish.reverse();
+    document.getElementById("itemwish").innerHTML = itemwish.reverse().join("");
   });
 }
 

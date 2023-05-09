@@ -383,6 +383,14 @@ figure {
   transform: scale(1.2);
 }
 
+.fh5co-open {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+
 .fh5co-cover {
   height: 100%;
   width: 100%;
@@ -2143,3 +2151,4 @@ optgroup[label]{
 }
 /*--thank you pop ends here--*/
 /*# sourceMappingURL=style.css.map */
+
