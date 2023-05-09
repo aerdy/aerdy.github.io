@@ -16,29 +16,29 @@ loaddata()
 function pushData(){
   var name = document.getElementById("fname").value;
   var message = document.getElementById("message").value;
-  var dataRef = database.ref('/nikahincom').push();
+  var confirm = document.getElementById("confirm").value;
+  if(name != null && message != null && confirm !='not'){
+    var dataRef = database.ref('/nikahincom').push();
 
-
-  dataRef.set({
-    name: name,
-    message: message,
-    profile: namefile
-  });
-  ClearFields();
-  loaddata();
+    dataRef.set({
+      name: name,
+      message: message,
+      confirm: confirm
+    });
+    ClearFields();
+    loaddata();
+  }
+  window.scrollTo({ left: 0, top: document.body.scrollHeight, behavior: "smooth" });
 }
 
 
 function loaddata(){
-    var itemwish = [];
+  var itemwish = [];
     database.ref('/nikahincom').orderByChild("date").on('value', function(snapshot){
     snapshot.forEach(function(data){
       itemwish.push(
                       '<div class="testimony-slide active text-center">'+
-                        '<figure>'+
-                          '<img src="images/bride.jpg" alt="user">'+
-                        '</figure>'+
-                      `<span id="idnamewish">${data.val().name}, via <a href="#" class="twitter">Invitation</a></span>`+
+                      `<span id="idnamewish">${data.val().name}, <small><a href="#" class="twitter">${data.val().confirm}</a></small></span>`+
                       `<small id="idmesswish" class="block">"${data.val().message}"</small>`+
                     '</div>');
       
@@ -68,3 +68,4 @@ function ClearFields() {
      document.getElementById("fname").value = "";
      document.getElementById("message").value = "";
 }
+

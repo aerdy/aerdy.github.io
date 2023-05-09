@@ -102,7 +102,7 @@
 							<p><a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Invitation Wedding&details=Invitation Wedding Anna Arthdi Putra & Yua Paramita Dewi&dates=20230604T120000/20230604T150000&recur=RRULE:FREQ%3DWEEKLY;UNTIL%3D20210603&ctz=Indonesia/Kediri" class="btn btn-default btn-sm" target="_blank"> <i class="fa fa-calendar"></i> Save the date</a></p>
 							
 							<div class="fh5co-heading-bottom">
-								<h4><b>4 Juni 2023</b></h4>
+								<h2><b>4 Juni 2023</b></h2>
 							</div>
 							<audio autoplay>
 								<source src="sound/wedding.mp3" type="audio/mpeg">
@@ -239,13 +239,13 @@
 						    <textarea id="message" name="subject" placeholder="Pesan" style="height:200px"></textarea>
 							<select name="confirm" id="confirm">
 								<optgroup label="Konfirmasi Kehadiran">
-									<option value="" selected disabled hidden>Konfirmasi Kehadiran</option>
-									<option value="hadir">Hadir</option>
-									<option value="tidakhadir">Tidak Hadir</option>
+									<option value="not" selected disabled hidden>Konfirmasi Kehadiran</option>
+									<option value="Hadir">Hadir</option>
+									<option value="Tidak Hadir">Tidak Hadir</option>
 								</optgroup>
 							  </select>
 							
-						    <input type="submit" value="Kirim" onClick="pushData()" class="btn btn-primary fh5co-heading-top3" data-toggle="modal" href="#ignismyModal">
+						    <input type="submit" value="Kirim" onClick="pushData()" class="btn btn-primary fh5co-heading-top3">
 						</div>
 					</div>
 				</div>
@@ -283,7 +283,7 @@
 	</footer>
 	</div>
 
-<div class="modal fade" id="ignismyModal" role="dialog">
+<div class="modal fade" id="modal" role="dialog">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
