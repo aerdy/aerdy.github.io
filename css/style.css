@@ -1372,7 +1372,7 @@ form label {
   height: auto;
   width: auto;
   text-align: center;
-  border-bottom: 1px solid rgb(138, 138, 138);
+  border-bottom: 1px solid rgb(227, 227, 227);
 }
 #fh5co-testimonial .wrap-testimony .testimony-slide span {
   font-size: 12px;
@@ -1381,9 +1381,19 @@ form label {
   font-weight: 700;
   display: block;
 }
-#fh5co-testimonial .wrap-testimony .testimony-slide span a.twitter {
+#fh5co-testimonial .wrap-testimony .testimony-slide span a.hadir {
   color: #f14e95;
   font-weight: 300;
+  background: #ffffff;
+  border-radius: 5px;
+  padding: 5px; 
+}
+#fh5co-testimonial .wrap-testimony .testimony-slide span a.tidakhadir {
+  color: #044187;
+  font-weight: 300;
+  background: #d4d4d4;
+  border-radius: 5px;
+  padding: 5px; 
 }
 #fh5co-testimonial .wrap-testimony .testimony-slide figure {
   margin-bottom: 10px;
