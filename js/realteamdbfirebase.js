@@ -17,18 +17,32 @@ function pushData(){
   var name = document.getElementById("fname").value;
   var message = document.getElementById("message").value;
   var confirm = document.getElementById("confirm").value;
-  if(name != null && message != null && confirm !='not'){
-    var dataRef = database.ref('/nikahincom').push();
+  
 
-    dataRef.set({
-      name: name,
-      message: message,
-      confirm: confirm
-    });
-    ClearFields();
-    loaddata();
+
+  if(name != ""){
+    if(message != ""){
+      if(confirm != "not"){
+        var dataRef = database.ref('/nikahincom').push();
+
+        dataRef.set({
+          name: name,
+          message: message,
+          confirm: confirm
+        });
+        ClearFields();
+        loaddata();
+        window.scrollTo({ left: 0, top: document.body.scrollHeight, behavior: "smooth" });
+        
+      }else{
+      document.getElementById("confirm").focus();
+      }
+    }else{
+      document.getElementById("message").focus();
+    }
+  }else{
+    document.getElementById("fname").focus();
   }
-  window.scrollTo({ left: 0, top: document.body.scrollHeight, behavior: "smooth" });
 }
 
 
@@ -36,14 +50,20 @@ function loaddata(){
   var itemwish = [];
     database.ref('/nikahincom').orderByChild("date").on('value', function(snapshot){
     snapshot.forEach(function(data){
-      itemwish.push(
-                      '<div class="testimony-slide active text-center">'+
-                      `<span id="idnamewish">${data.val().name}, <small><a class="twitter">${data.val().confirm}</a></small></span>`+
-                      `<small  class="block">"${data.val().message}"</small>`+
-                    '</div>');
-      
+      if(data.val().confirm == 'Hadir'){
+        itemwish.push(
+          `<div class="testimony-slide fh5co-heading-top3 active text-center ">`+
+          `<span>${data.val().name}, <small><a class="hadir">${data.val().confirm}</a></small></span>`+
+          `<small>"${data.val().message}"</small></div>`);
+      }else{
+        itemwish.push(
+          `<div class="testimony-slide fh5co-heading-top3 active text-center">`+
+          `<span>${data.val().name}, <small><a class="tidakhadir">${data.val().confirm}</a></small></span>`+
+          `<small>"${data.val().message}"</small></div>`);
+      }
+    
     });
-    document.getElementById("itemwish").innerHTML = itemwish.reverse();
+    document.getElementById("itemwish").innerHTML = itemwish.reverse().join("");
   });
 }
 
@@ -65,7 +85,9 @@ function uploadImage(namefile) {
 }
 
 function ClearFields() {
-     document.getElementById("fname").value = "";
-     document.getElementById("message").value = "";
+  document.getElementById("fname").value = "";
+  document.getElementById("message").value = "";
+     document.getElementById("fname").placeholder = "Nama";
+     document.getElementById("message").placeholder = "Pesan";
 }
 
