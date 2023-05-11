@@ -238,9 +238,17 @@
 function getMethod(){
 	const queryParams = new URLSearchParams(window.location.search);
 	let name = queryParams.get('name'); 
+	let date = queryParams.get('date'); 
 	if(name == null){
 		document.getElementById("namewhiser").innerHTML = `<h2><b>Nama Anda</b></h2><h5>(Mohon maaf jika ada kesalahan penulisan nama & gelar)</h5>`;
 	}else{
 		document.getElementById("namewhiser").innerHTML = `<h2><b>${name}</b></h2><h5>(Mohon maaf jika ada kesalahan penulisan nama & gelar)</h5>`;
+	}
+
+	if(date == 1){
+		document.getElementById("date").innerHTML = `11:00 - 13:00 WIB`;
+	}else{
+		document.getElementById("date").innerHTML = `12:00 - 14:00 WIB`
+
 	}
 }
