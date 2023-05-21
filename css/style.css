@@ -1375,6 +1375,8 @@ form label {
 
 #fh5co-testimonial .wrap-testimony {
   position: relative;
+  margin-right: 50px;
+  margin-left: 50px;
 }
 #fh5co-testimonial .wrap-testimony .testimony-slide {
   height: auto;

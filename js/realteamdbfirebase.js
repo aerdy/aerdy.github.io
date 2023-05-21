@@ -48,6 +48,28 @@ function pushData(){
 
 function loaddata(){
   var itemwish = [];
+    database.ref('/nikahincom').orderByChild("date").limitToLast(5).on('value', function(snapshot){
+    snapshot.forEach(function(data){
+      if(data.val().confirm == 'Hadir'){
+        itemwish.push(
+          `<div class="testimony-slide fh5co-heading-top3 active text-center ">`+
+          `<span>${data.val().name}, <small><a class="hadir">${data.val().confirm}</a></small></span>`+
+          `<small>"${data.val().message}"</small></div>`);
+      }else{
+        itemwish.push(
+          `<div class="testimony-slide fh5co-heading-top3 active text-center">`+
+          `<span>${data.val().name}, <small><a class="tidakhadir">${data.val().confirm}</a></small></span>`+
+          `<small>"${data.val().message}"</small></div>`);
+      }
+    
+    });
+    document.getElementById("itemwish").innerHTML = itemwish.reverse().join("");
+  });
+}
+
+function loadMore(){
+  document.getElementById("itemwish").innerHTML = "";
+  var itemwish = [];
     database.ref('/nikahincom').orderByChild("date").on('value', function(snapshot){
     snapshot.forEach(function(data){
       if(data.val().confirm == 'Hadir'){
@@ -64,6 +86,7 @@ function loaddata(){
     
     });
     document.getElementById("itemwish").innerHTML = itemwish.reverse().join("");
+    document.getElementById("loadmore").innerHTML = "";
   });
 }
 
