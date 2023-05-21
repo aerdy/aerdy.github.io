@@ -245,10 +245,7 @@ function getMethod(){
 		document.getElementById("namewhiser").innerHTML = `<h2><b>${name}</b></h2><h5>(Mohon maaf jika ada kesalahan penulisan nama & gelar)</h5>`;
 	}
 
-	// if(date == 1){
-	// 	document.getElementById("date").innerHTML = `11:00 - 13:00 WIB`;
-	// }else{
-	// 	document.getElementById("date").innerHTML = `12:00 - 14:00 WIB`
-
-	// }
+	if(date == 10){
+		document.getElementById("date").innerHTML = `10:00 WIB`;
+	}
 }
