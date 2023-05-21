@@ -1394,14 +1394,14 @@ form label {
 #fh5co-testimonial .wrap-testimony .testimony-slide span a.hadir {
   color: #f14e95;
   font-weight: 300;
-  background: #ffffff;
+  background: #e7e7e7;
   border-radius: 5px;
   padding: 5px; 
 }
 #fh5co-testimonial .wrap-testimony .testimony-slide span a.tidakhadir {
   color: #044187;
   font-weight: 300;
-  background: #d4d4d4;
+  background: #e7e7e7;
   border-radius: 5px;
   padding: 5px; 
 }
